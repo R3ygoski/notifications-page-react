@@ -1,0 +1,170 @@
+@use './scss/var';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var.$main-font;
+  color: var.$dark-grayish-blue;
+  font-weight: 500;
+}
+
+.main {
+  padding: 1rem;
+  background: var.$white;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+    &__title {
+      font-size: 1.25rem;
+      color: var.$very-dark-blue;
+      font-weight: 800;
+      &-unread-msg {
+        background-color: var.$blue;
+        color: var.$white;
+        padding: .15rem .675rem;
+        margin-left: .6rem;
+        border-radius: .5rem;
+      }
+    }
+    &__read-all {
+      font-size: .9rem;
+      transition: .3s;
+      cursor: pointer;
+      &:hover {
+        color: var.$blue;
+      }
+      &--off {
+        font-size: .9rem;
+        color: var.$grayish-blue;
+      }
+    }
+  }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem .2rem 1rem 0;
+    .cards {
+      display: flex;
+      background: var.$white;
+      padding: 1rem;
+      border-radius: .5rem;
+      &__image {
+        width: 38px;
+      }
+      &__status {
+        margin-left: .825rem;
+        font-size: .925rem;
+        &-desc {
+          font-size: .9rem;
+        }
+        &-time {
+          margin-top: .25rem;
+          color: var.$grayish-blue;
+        }
+        &-comment {
+          margin-top: 1rem;
+          padding: 1rem;
+          border: 1px solid var.$light-grayish-blue-two;
+          border-radius: .5rem;
+          transition: .3s;
+          cursor: pointer;
+          &:hover {
+            background: var.$light-grayish-blue-one;
+          }
+        }
+        &-image>img {
+          height: 38px;
+          margin-left: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px){
+  #root {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    margin-top: 3rem;
+    width: 49%;
+    height: 90%;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 15px rgba(0,0,0,.2);
+    .header {
+      &__title {
+        font-size: 1.4rem;
+        &-unread-msg {
+          padding: .1rem .825rem;
+        }
+      }
+      &__read-all {
+        font-size: 1rem;
+        &--off {
+          font-size: 1rem;
+        }
+      }
+    }
+    &__article {
+      .cards {
+        &__image {
+          width: 48px;
+        }
+        &__status {
+          &-desc {
+            font-size: 1rem;
+          }
+          &-comment {
+            width: 96%;
+            border: 1px solid var.$light-grayish-blue-two;
+          }
+          &-image {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.name, .group, .target {
+  font-weight: 800;
+  transition: .3s;
+  cursor: pointer;
+  &:hover {
+    color: var.$blue;
+  }
+}
+.name {
+  color: var.$very-dark-blue;
+}
+.group {
+  color: var.$blue;
+}
+.target {
+  color: var.$dark-grayish-blue;
+}
+
+.read-status {
+  display: inline-block;
+  background: var.$red;
+  width: 8px;
+  height: 8px;
+  border-radius: 1rem;
+  margin-left: 5px;
+}
+.unread {
+  display: flex;
+  background: var.$very-light-grayish-blue;
+  padding: 1rem 1rem;
+  border-radius: .5rem;
+}
