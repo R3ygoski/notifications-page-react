@@ -6,6 +6,7 @@ import CardPicture from './components/CardPicture'
 import { useState } from 'react'
 
 import {status, target, avatar, images} from './data.js'
+import Attribution from './components/Attribution/index.jsx'
 
 export default function App() {
 
@@ -46,6 +47,7 @@ export default function App() {
         status={status.leftGp} group={target.chessGroup}
         read={true} />
       </article>
+      <Attribution/>
     </main>
     </>
   )

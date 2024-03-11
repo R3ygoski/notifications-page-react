@@ -12,6 +12,7 @@
 .main {
   padding: 1rem;
   background: var.$white;
+  position: relative;
   .header {
     display: flex;
     justify-content: space-between;
@@ -167,4 +168,16 @@
   background: var.$very-light-grayish-blue;
   padding: 1rem 1rem;
   border-radius: .5rem;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+  bottom: -2%;
+  right: 0;
+  left: 0;
+  a {
+    color: var.$very-dark-blue;
+  }
 }
