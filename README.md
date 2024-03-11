@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Github](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/notification-page-made-with-react-and-sass-0HLOkXBtL_)
+- Live Site URL: [Github](https://r3ygoski.github.io/notifications-page-react/)
 
 ## My process
 
